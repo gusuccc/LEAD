@@ -1,0 +1,32 @@
+embedding_size: 64
+n_layers: 3
+reg_weight: 1e-4
+
+ssl_temp: 0.1
+ssl_reg: 1e-7
+hyper_layers: 1
+
+alpha: 1
+
+proto_reg: 8e-8
+num_clusters: 100
+
+m_step: 1
+warm_up_step: 20
+# dataset: Amazon_Books
+data_path: /data7_8T/ycx/tmp/Recbole_STRec/RecBole-GNN/data/
+
+
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision', 'ItemCoverage', 'GiniIndex', 'ShannonEntropy', 'TailPercentage']
+topk: [5, 10, 20]
+seed: 42
+
+#eval_args:
+#    group_by: none
+#    split: {'RS': [0.6,0.4,0.4]}
+train_neg_sample_args:
+    uniform: 1
+
+epochs: 100
+stopping_step: 5
+learning_rate: 0.003 #Y0.0005

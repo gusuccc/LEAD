@@ -1,0 +1,24 @@
+embedding_size: 64              # (int) The embedding size of users and items. 
+n_factors: 4                    # (int) The number of factors for disentanglement.
+n_iterations: 2                 # (int) The number of iterations for each layer.
+n_layers: 1                     # (int) The number of reasoning layers.
+reg_weight: 1e-3                # (float) The L2 regularization weight.
+cor_weight: 0.01                # (float) The correlation loss weight.
+
+epochs: 50
+stopping_step: 5
+learning_rate: 0.004 #A0.03 s0.01
+#######
+data_path: /data7_8T/ycx/tmp/Recbole_STRec/RecBole-GNN/data/
+# dataset: Amazon_Books
+
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision', 'ItemCoverage', 'GiniIndex', 'ShannonEntropy', 'TailPercentage']
+topk: [5, 10, 20]
+seed: 42
+#eval_args:
+#    group_by: none
+#    split: {'RS': [0.6,0.4,0.4]}
+train_neg_sample_args:
+    uniform: 1
+
+#valid_metric: MRR@20

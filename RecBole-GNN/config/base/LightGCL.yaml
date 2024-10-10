@@ -1,0 +1,22 @@
+embedding_size: 64              # (int) The embedding size of users and items.
+n_layers: 2                     # (int) The number of layers in LightGCL.
+dropout: 0.0                    # (float) The dropout ratio.
+temp: 0.8                       # (float) The temperature in softmax.
+lambda1: 0.01                   # (float) The hyperparameter to control the strengths of SSL.
+lambda2: 1e-05                  # (float) The L2 regularization weight.
+q: 5                            # (int) A slightly overestimated rank of the adjacency matrix.
+data_path: /data7_8T/ycx/tmp/Recbole_STRec/RecBole-GNN/data/
+# dataset: Amazon_Books
+
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision', 'ItemCoverage', 'GiniIndex', 'ShannonEntropy', 'TailPercentage']
+topk: [5, 10, 20]
+seed: 42
+#eval_args:
+#    split: {'RS': [0.6,0.2,0.2]}
+train_neg_sample_args:
+    uniform: 1
+
+epochs: 50
+stopping_step: 5
+learning_rate: 0.03 #A0.03 S0.003
+valid_metric: recall@20

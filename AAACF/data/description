@@ -1,0 +1,14 @@
+- amazon(yelp/steam)
+|--- trn_mat.pkl    # training set (sparse matrix)
+|--- val_mat.pkl    # validation set (sparse matrix)
+|--- tst_mat.pkl    # test set (sparse matrix)
+|--- usr_prf.pkl    # text description of users
+|--- itm_prf.pkl    # text description of items
+|--- usr_emb_np.pkl # user text embeddings
+|--- itm_emb_np.pkl # item text embeddings
+
+
+Dataset     #Users  #Items  #Interactions   Density
+Amazon-book 11,000  9,332   120,464         1.2𝑒 −3
+Yelp        11,091  11,010  166,620         1.4𝑒 −3
+Steam       23,310  5,237   316,190         2.6𝑒 −3

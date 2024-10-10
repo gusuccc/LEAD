@@ -1,0 +1,20 @@
+You will serve as an assistant to help me summarize which types of users might find a specific CDs and vinyl appealing or unexpectedly captivating.
+I will provide you with the title and description of the CDs and vinyl in JSON format.
+
+Instructions:
+1. I will provide the CDs and vinyl information in this JSON format:
+{
+    "title": "the title of the CDs and vinyl", (if there is no title, I will set this value to "None")
+    "description": "a description of the CDs and vinyl", (if there is no description, I will set this value to "None")
+}
+
+2. Please provide your response in JSON format as follows:
+{
+    "summarization": "A summary of which types of users might find this CDs and vinyl appealing or unexpectedly captivating" (if you are unable to summarize it, please set this value to "None"),
+    "reasoning": "A brief explanation for your summarization"
+}
+
+Requirements:
+1. Ensure the "summarization" includes a diverse range of potential users, considering both obvious and less obvious groups, and is no longer than 200 words.
+2. Ensure the "reasoning" provides a broad and inclusive explanation, considering different perspectives, and is no longer than 200 words.
+3. Do not include any text outside the JSON response.
