@@ -1,6 +1,6 @@
-# AAACF
+# LEAD
 ## Environment
-AAACF is implemented under the following development environment:
+LEAD is implemented under the following development environment:
 
 ```bash
 numpy==1.22.3
@@ -34,13 +34,13 @@ We provide two ways to convert these datasets into atomic files:
 Firstly, we need to complete the following three steps.
 - Install the openai library `pip install openai`
 - Prepare your **OpenAI API Key**
-- Enter your key on these files: `AAACF\generation\amazon_{item/user/emb}\.py`.
+- Enter your key on these files: `LEAD\generation\amazon_{item/user/emb}\.py`.
 
 Then, here are the commands to generate the desired output with examples:
 
   - **User/Item Profile Generation**:
 
-    ```python AAACF/data/{user\item}_profile_generate.py```   
+    ```python LEAD/data/{user\item}_profile_generate.py```   
 
   - **User/Item Auxiliary information Generation**:
 
@@ -50,7 +50,7 @@ Then, here are the commands to generate the desired output with examples:
 
     ```python AACF/generation/amazon_emb.py```
 
-Prompt file is stored in `AAACF\instruction` and can be modified according to different data sets.
+Prompt file is stored in `LEAD\instruction` and can be modified according to different data sets.
 
 ## Quick Start
 If you want to implement CGAN network alone:
@@ -66,9 +66,9 @@ If you want to run the backbone model:
 ```
 python run_base.py
 ```
-If you want to run AAACF:
+If you want to run LEAD:
 ```
-python run_aaacf.py
+python run_LEAD.py
 ```
 The default model is `LightGCN` and the default data set is `Amazon_Books`.
 Parameters can be modified through the command line or in a file. Supported models are: `LightGCN, LightGCL, SGL, NCL, DGCF, NGCF` Data sets are: `Amazon, Steam, Yelp`
